@@ -1,0 +1,16 @@
+<div class="navbar">
+  <h1>Result</h1>
+    <% if @included %>
+      <% if @english %>
+        <p>Parabéns <%= @word %> é uma palavra válida</p>
+      <% else %>
+        <p>Sinto muito <%= @word %> não é uma palavra válida</p>
+        <% end %>
+    <% else %>
+      <p> Sinto muito, mas <%= @word %> não pode ser construída com as letras <%= @letters.join(",") %></p>
+    <% end %>
+
+
+</div>
+
+<p><%= link_to 'Play again', new_path  %></p>
